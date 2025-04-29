@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
-import resumeImage from '../../assets/resume-sample.png'; // use your own image
+import resumeImage from '../../assets/Resume-Preview.png'; // use your own image
 
 const Hero = () => {
   return (

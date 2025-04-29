@@ -1,0 +1,48 @@
+.templates {
+    padding: 60px 40px;
+    background: #f8f9fe;
+    text-align: center;
+  }
+  
+  .templates-title {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .templates-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .templates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .template-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+  }
+  
+  .template-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .template-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .template-name {
+    font-size: 1.1rem;
+    color: #222;
+  }
+  

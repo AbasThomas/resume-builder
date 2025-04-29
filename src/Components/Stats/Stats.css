@@ -1,0 +1,26 @@
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    flex-wrap: wrap;
+  }
+  
+  .stat-item {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .stat-item h2 {
+    font-size: 2rem;
+    color: #5b63ff;
+    margin-bottom: 10px;
+  }
+  
+  .stat-item p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
