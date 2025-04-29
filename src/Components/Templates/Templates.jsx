@@ -1,41 +1,88 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Templates.css';
 
+// placeholder images – replace with your real screenshots
 const TEMPLATES = [
   {
-    title: 'Modern Resume',
-    img: 'https://via.placeholder.com/300x400?text=Modern+Template',
+    title: 'Executive',
+    description:
+      'Perfect for senior professionals and executives looking to highlight leadership experience.',
+    img: 'https://via.placeholder.com/300x400?text=Executive+Template',
+    badge: 'Popular',
+    categories: ['All Templates', 'Professional', 'Modern'],
   },
   {
-    title: 'Creative Resume',
-    img: 'https://via.placeholder.com/300x400?text=Creative+Template',
+    title: 'Creative Pro',
+    description:
+      'Designed for creative professionals who want to showcase their portfolio and skills.',
+    img: 'https://via.placeholder.com/300x400?text=Creative+Pro',
+    categories: ['All Templates', 'Creative', 'Modern'],
   },
   {
-    title: 'Professional Resume',
-    img: 'https://via.placeholder.com/300x400?text=Professional+Template',
+    title: 'Minimalist',
+    description:
+      'Clean and simple design that puts focus on your content and professional experience.',
+    img: 'https://via.placeholder.com/300x400?text=Minimalist',
+    badge: 'New',
+    categories: ['All Templates', 'Simple'],
   },
 ];
 
-const Templates = () => (
-  <section className="templates">
-    <h2 className="templates-title">Choose from Stunning Templates</h2>
-    <p className="templates-subtitle">
-      Handcrafted designs tailored to make your resume stand out.
-    </p>
-    <div className="templates-buttons">
-      <button className="btn-primary">Create Resume</button>
-      <button className="btn-secondary">View Templates</button>
-    </div>
+const CATEGORIES = [
+  'All Templates',
+  'Creative',
+  'Professional',
+  'Simple',
+  'Modern',
+];
 
-    <div className="templates-grid">
-      {TEMPLATES.map((template) => (
-        <div key={template.title} className="template-card">
-          <img src={template.img} alt={template.title} className="template-image" />
-          <h3 className="template-name">{template.title}</h3>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+export default function Templates() {
+  const [active, setActive] = useState('All Templates');
 
-export default Templates;
+  const visible = TEMPLATES.filter((t) =>
+    t.categories.includes(active)
+  );
+
+  return (
+    <section className="templates">
+      <div className="templates-header">
+        <h2>Professional Resume Templates</h2>
+        <p>Choose from our collection of ATS-friendly templates designed to impress employers</p>
+      </div>
+
+      <div className="templates-tabs">
+        {CATEGORIES.map((cat) => (
+          <button
+            key={cat}
+            className={cat === active ? 'tab active' : 'tab'}
+            onClick={() => setActive(cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <div className="templates-grid">
+        {visible.map((t) => (
+          <div key={t.title} className="template-card">
+            {t.badge && <span className="badge">{t.badge}</span>}
+            <img
+              src={t.img}
+              alt={t.title}
+              className="template-image"
+            />
+            <div className="template-info">
+              <h3>{t.title}</h3>
+              <p>{t.description}</p>
+              <button className="use-btn">Use This Template</button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="view-all">
+        <a href="#all-templates">View all templates →</a>
+      </div>
+    </section>
+  );
+}

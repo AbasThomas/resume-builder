@@ -1,0 +1,96 @@
+.pricing {
+    padding: 80px 40px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .pricing-title {
+    font-size: 2.25rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  
+  .pricing-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 50px;
+  }
+  
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .pricing-card {
+    background: #f9f9fc;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    position: relative;
+    text-align: left;
+  }
+  
+  .highlighted {
+    background-color: #fff;
+    border: 2px solid #5b63ff;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background-color: #5b63ff;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+  }
+  
+  .plan-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .plan-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5b63ff;
+    margin-bottom: 20px;
+  }
+  
+  .plan-price small {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .feature-list li {
+    margin-bottom: 10px;
+  }
+  
+  .pricing-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #5b63ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .pricing-btn:hover {
+    background-color: #4750e6;
+  }
+  

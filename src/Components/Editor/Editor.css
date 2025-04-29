@@ -1,0 +1,45 @@
+.editor {
+    padding: 80px 40px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .editor-title {
+    font-size: 2.25rem;
+    color: #222;
+    margin-bottom: 8px;
+  }
+  
+  .editor-subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .editor-image-wrapper {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+  }
+  
+  .editor-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .editor-btn {
+    background-color: #5b63ff;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .editor-btn:hover {
+    background-color: #4750e6;
+  }
+  
