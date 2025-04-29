@@ -1,0 +1,42 @@
+/* Button.css */
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Primary button style */
+  /* .primary {
+    background-color: ;
+    color: white;
+    border: none;
+  } */
+  
+  .primary:hover {
+    background-color: #4338CA;
+  }
+  
+  /* Secondary button style */
+  .secondary {
+    background-color: white;
+    color: #4F46E5;
+    border: 2px solid #4F46E5;
+  }
+  
+  .secondary:hover {
+    background-color: #4F46E5;
+    color: white;
+  }
+  
+  /* Disabled state */
+  .btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
