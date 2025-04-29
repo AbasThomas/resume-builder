@@ -11,31 +11,45 @@ import Editor from './Components/Editor/Editor';
 import Testimonials from './Components/Testimonials/Testimonials';
 import Pricing from './Components/Pricing/Pricing';
 import FAQ from './Components/FAQ/FAQ';
+import CTA from './Components/CTA/CTA';
+import Footer from './Components/Footer/Footer';
+import SignUp from './Components/SignUp/SignUp';
 
-// const Templates = () => <h2 className="p-6">Templates Page</h2>;
+// Temporary SignIn Component
 const SignIn = () => <h2 className="p-6">Sign In Page</h2>;
-const GetStarted = () => <h2 className="p-6">Get Started Page</h2>;
 
 const App = () => {
   return (
     <Router>
       <Navbar />
-      <Hero/>
-      <Stats/>
-      <Features/>
-      <HowItWorks/>
-      <Templates/>
-      <Editor/>
-      <Testimonials/>
-      <Pricing/>
-      <FAQ/>
+
       <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <Stats />
+              <Features />
+              <HowItWorks />
+              <Templates />
+              <Editor />
+              <Testimonials />
+              <Pricing />
+              <FAQ />
+              <CTA />
+      <Footer />
+
+            </>
+          }
+        />
         <Route path="/templates" element={<Templates />} />
         <Route path="/features" element={<Features />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/get-started" element={<GetStarted />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
+
     </Router>
   );
 };
